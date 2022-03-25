@@ -53,6 +53,7 @@
 #include <unordered_map>
 #include <vector>
 
+#include "Vector.hpp"
 #include <MinHook.h>
 
 namespace ER {
@@ -96,3 +97,4 @@ namespace ER {
 }
 
 #include "Game.hpp"
+#include "GameEnums.hpp"

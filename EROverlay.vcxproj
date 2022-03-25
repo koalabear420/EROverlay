@@ -162,9 +162,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ChrIns.hpp" />
+    <ClInclude Include="ChrModules.hpp" />
     <ClInclude Include="Common.hpp" />
     <ClInclude Include="D3DRenderer.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameDataMan.hpp" />
+    <ClInclude Include="GameEnums.hpp" />
     <ClInclude Include="Hooking.hpp" />
     <ClInclude Include="ImGui\imconfig.h" />
     <ClInclude Include="ImGui\imgui.h" />
@@ -178,6 +182,7 @@
     <ClInclude Include="ImGui\imstb_textedit.h" />
     <ClInclude Include="ImGui\imstb_truetype.h" />
     <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="Menu.hpp" />
     <ClInclude Include="Minhook\include\MinHook.h" />
     <ClInclude Include="Minhook\src\buffer.h" />
     <ClInclude Include="Minhook\src\HDE\hde32.h" />
@@ -186,12 +191,16 @@
     <ClInclude Include="Minhook\src\HDE\table32.h" />
     <ClInclude Include="Minhook\src\HDE\table64.h" />
     <ClInclude Include="Minhook\src\trampoline.h" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ChrIns.cpp" />
+    <ClCompile Include="ChrModules.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="D3DRenderer.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameDataMan.cpp" />
     <ClCompile Include="Hooking.cpp" />
     <ClCompile Include="ImGui\imgui.cpp" />
     <ClCompile Include="ImGui\imgui_demo.cpp" />
@@ -203,6 +212,7 @@
     <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
     <ClCompile Include="ImGui\imgui_tables.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Minhook\src\buffer.c" />
     <ClCompile Include="Minhook\src\HDE\hde32.c" />
     <ClCompile Include="Minhook\src\HDE\hde64.c" />

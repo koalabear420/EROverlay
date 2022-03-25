@@ -36,7 +36,6 @@ namespace ER
 
 
 		bool Init(IDXGISwapChain3* swapChain);
-		void InitStyle();
 
 		static HRESULT APIENTRY HookPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags);
 		static void HookExecuteCommandLists(ID3D12CommandQueue* queue, UINT NumCommandLists, ID3D12CommandList* ppCommandLists);
@@ -59,7 +58,6 @@ namespace ER
 
 		static LRESULT WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-		void* m_OriginalWndProc{};
 		uint64_t m_OldWndProc{};
 
 	private:

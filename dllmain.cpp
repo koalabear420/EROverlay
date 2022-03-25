@@ -2,11 +2,16 @@
 #include "Common.hpp"
 #include "D3DRenderer.hpp"
 #include "Hooking.hpp"
+#include "Menu.hpp"
+#include "GameDataMan.hpp"
 
 void MainThread()
 {
     using namespace ER;
     g_GameVariables = std::make_unique<GameVariables>();
+    g_GameDataMan = std::make_unique<GameDataMan>();
+
+    g_Menu = std::make_unique<Menu>();
     g_D3DRenderer = std::make_unique<D3DRenderer>();
     g_Hooking = std::make_unique<Hooking>();
 
@@ -22,10 +27,7 @@ void MainThread()
 
     std::this_thread::sleep_for(500ms);
     g_Hooking->Unhook();
-    g_D3DRenderer.reset();
     std::this_thread::sleep_for(500ms);
-    g_Hooking.reset();
-    g_GameVariables.reset();
 }
 
 BOOL APIENTRY DllMain( HMODULE hModule,
